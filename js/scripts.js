@@ -1,5 +1,4 @@
 // ============ Backend Logic ============
-
 var toppingPrices = {'pepper' : 1, 'mushroom' : 1, 'onion' : 1, 'olive' : 1};
 
 function Pizza (size) {
@@ -7,6 +6,10 @@ function Pizza (size) {
   this.toppings = [];
   this.price = 0;
 }
+
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
+ }
 
 Pizza.prototype.getPrice = function () {
   this.price = 0;
@@ -25,16 +28,15 @@ Pizza.prototype.getPrice = function () {
   return this.price;
 }
 
-Pizza.prototype.addTopping = function(topping) {
-  this.toppings.push(topping);
- }
-
-
 // ============ Frontend Logic ============
 $(document).ready(function() {
   $('form#order-pizza').submit(function(e) {
     e.preventDefault();
-    var size = $('#pizza-size').val();
+
+    $('input:radio[name="size"]').click(function() {
+      var size = $(this.value).val();
+    });
+
     var pizza = new Pizza(size);
 
     $('input[name="topping"]:checked').each(function(){
