@@ -30,25 +30,19 @@ Pizza.prototype.getPrice = function () {
 
 // ============ Frontend Logic ============
 $(document).ready(function() {
-  var size = 'small';
+  var size = "small";
   $('input:radio[name="size"]').click(function() {
     size = $(this.value).val();
   });
-
   $('form#order-pizza').submit(function(e) {
     e.preventDefault();
-
     var pizza = new Pizza(size);
-
     $('input[name="topping"]:checked').each(function(){
       pizza.addTopping(this.value);
     });
-
     var pizzaPrice = pizza.getPrice();
-
     $('#output').append('<p>' + pizza.price + '</p>');
     $('#output').show();
     $('form#order-pizza').toggle();
-
   });
 });

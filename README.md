@@ -1,6 +1,6 @@
 # _EPICODUS STUDENT PROJECT | Order Pizza_
 
-#### _Pizza Order Form, 17 June 2016_
+#### _Pizza Order Calculator, 17 June 2016_
 
 #### By _**Lauren Posey**_
 
@@ -12,9 +12,8 @@ _This is an Epicodus student project that utilizes object oriented programming, 
 
 Behavior  | Input Example | Output Example
 ------------- | ------------- | -------------
-User submits size of their pizza and is shown the selection and cost | size small  | one small pizza $10.00
-User submits a topping selection is shown the selection and cost | peppers  | peppers $1.00
-User submits size and topping and is shown the selection and total cost | small with peppers and onions  | small pizza with peppers and onion $11.50
+User submits size of their pizza and is shown the cost | size small  | total 12
+User submits size and topping and is shown the total cost | small with peppers and onions  | total 14
 
 ## Setup/Installation Requirements
 
