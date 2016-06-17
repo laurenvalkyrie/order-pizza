@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="jumbotron">Order some pizza, yo.</h1>
+      <div>
+        <form id="order-pizza">
+          <div id="toppings" class=form-section>
+            <h3>Toppings</h3>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="pepper">
+                Green Peppers
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="mushroom">
+                Mushrooms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="onion">
+                Onions
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="olive">
+                Olives
+              </label>
+            </div>
+          </div>
+          <div id="sizes" class="form-section">
+            <h3>Size</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="small" checked>
+                Small
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="medium">
+                Medium
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="large">
+                Large
+              </label>
+            </div>
+          </div>
+          <div id="button" class="form-section">
+            <button id="submit-order" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+        <div id="output">
+            <p>
+              <span class="display-receipt"> </span>
+            </p>
+        </div>
+    </div>
+  </body>
+</html>

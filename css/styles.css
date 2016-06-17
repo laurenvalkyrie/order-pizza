@@ -1,0 +1,22 @@
+#output p {
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+#output {
+  display: none;
+  height: auto;
+  width: 20vw;
+  background-color: #add8e6;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 2vh;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+#output h1, p {
+  text-align: center;
+  padding-top: 5%;
+}
