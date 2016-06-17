@@ -1,6 +1,6 @@
 // ============ Backend Logic ============
 
-var toppingPrices = { 'mushroom' : 1.0};
+var toppingPrices = {'pepper' : 1, 'mushroom' : 1, 'onion' : 1, 'olive' : 1};
 
 function Pizza (size) {
   this.pizzaSize = size;
@@ -10,7 +10,6 @@ function Pizza (size) {
 
 Pizza.prototype.getPrice = function () {
   this.price = 0;
-
   if (this.pizzaSize === "small") {
     this.price += 12;
   } else if (this.pizzaSize === "medium") {
@@ -18,13 +17,11 @@ Pizza.prototype.getPrice = function () {
   } else {
     this.price += 22;
   }
-
   for (var i = 0; i < this.toppings.length; i++) {
     var currentTopping = this.toppings[i];
     var toppingPrice = toppingPrices[currentTopping];
     this.price += toppingPrice;
   }
-
   return this.price;
 }
 
@@ -34,21 +31,21 @@ Pizza.prototype.addTopping = function(topping) {
 
 
 // ============ Frontend Logic ============
-$(function() {
-  $('order-pizza').submit(function(e) {
+$(document).ready(function() {
+  $('form#order-pizza').submit(function(e) {
     e.preventDefault();
     var size = $('#pizza-size').val();
     var pizza = new Pizza(size);
+
     $('input[name="topping"]:checked').each(function(){
       pizza.addTopping(this.value);
     });
 
     var pizzaPrice = pizza.getPrice();
 
-    $('#output'.append('<p>' + pizza.pizzaSize + '</p>', '<li>' + pizza.toppings + '</li>', '<p>' + pizza.totalCost + '</p>');
+    $('#output').append('<p>' + pizza.pizzaPrice + '</p>');
     $('#output').show();
-    $('#order-pizza').toggle();
+    $('form#order-pizza').toggle();
 
   });
-
 });
