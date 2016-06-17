@@ -30,13 +30,14 @@ Pizza.prototype.getPrice = function () {
 
 // ============ Frontend Logic ============
 $(document).ready(function() {
+  var size = 'small';
   $('input:radio[name="size"]').click(function() {
-    var size = $(this.value).val();
+    size = $(this.value).val();
   });
 
   $('form#order-pizza').submit(function(e) {
     e.preventDefault();
-    
+
     var pizza = new Pizza(size);
 
     $('input[name="topping"]:checked').each(function(){
