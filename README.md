@@ -1,6 +1,6 @@
 # _EPICODUS STUDENT PROJECT | Order Pizza_
 
-#### _Pig Dice, 17 June 2016_
+#### _Pizza Order Form, 17 June 2016_
 
 #### By _**Lauren Posey**_
 
