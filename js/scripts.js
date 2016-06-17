@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     var pizzaPrice = pizza.getPrice();
 
-    $('#output').append('<p>' + pizza.pizzaPrice + '</p>');
+    $('#output').append('<p>' + pizza.price + '</p>');
     $('#output').show();
     $('form#order-pizza').toggle();
 
